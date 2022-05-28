@@ -1,7 +1,7 @@
 window.addEventListener('load', ()=> {
     let simbolo = document.getElementById('simbolo')  
     let precio = document.getElementById('precio')  
-    let vientoVelocidad = document.getElementById('viento-velocidad') 
+    let grafica = document.getElementById('grafica') 
 
     const url = `https://api.binance.com/api/v3/ticker/price`
     fetch(url)
