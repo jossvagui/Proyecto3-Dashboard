@@ -17,4 +17,31 @@ window.addEventListener('load', ()=> {
         .catch( error => {
             console.log(error)
         })
+
+        var ctx= document.getElementById("grafica").getContext("2d");
+        var myChart= new Chart(ctx,{
+            type:"bar",
+            data:{
+                labels:['ETH'],
+                datasets:[{                        
+                        data:[0.0615],
+                        backgroundColor:[                            
+                            'rgb(74, 135, 72,0.5)'
+                        ]
+                }]
+            },
+            options:{
+                scales:{
+                    yAxes:[{
+                            ticks:{
+                                beginAtZero:true
+                            }
+                    }]
+                }
+            }
+        });
+
+
+
+
 })
