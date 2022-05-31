@@ -57,11 +57,20 @@
     grid-gap: 10px;
 }
 
-#caja1, #caja2, #caja3 {
+#caja1, #caja2 {
     display: inline-block;
     text-align: center;
     vertical-align: middle;
     padding-top: 20%;
+    width: 200px;
+    height: 200px;
+}
+
+#caja3 {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 0%;
     width: 200px;
     height: 200px;
 }
