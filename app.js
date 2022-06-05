@@ -1,14 +1,7 @@
-window.addEventListener('load', ()=> {
-    let simbolo = document.getElementById('simbolo')  
-    let precio = document.getElementById('precio')  
-    let grafica = document.getElementById('grafica') 
-    let simbolo2 = document.getElementById('simbolo2')  
-    let precio2 = document.getElementById('precio2')  
-    let grafica2 = document.getElementById('grafica2') 
-    let simbolo3 = document.getElementById('simbolo3')  
-    let precio3 = document.getElementById('precio3')  
-    let grafica3 = document.getElementById('grafica3') 
+import {precio, grafica, simbolo, precio2, grafica2, simbolo2, precio3, grafica3, simbolo3} from "./variables.js";
 
+window.addEventListener('load', ()=> {
+    
     const url = `https://api.binance.com/api/v3/ticker/price`
     fetch(url)
         .then( response => { return response.json()})
@@ -28,7 +21,7 @@ window.addEventListener('load', ()=> {
         })
         .catch( error => {
             console.log(error)
-        })
+        }) 
 
         var ctx= document.getElementById("grafica").getContext("2d");
         var myChart= new Chart(ctx,{
@@ -71,7 +64,7 @@ window.addEventListener('load', ()=> {
             data:{
                 labels:['LTC'],
                 datasets:[{                        
-                        data:[0.002],
+                        data:[0.0021],
                         backgroundColor:[                            
                             '#800080'
                         ]
@@ -106,7 +99,7 @@ window.addEventListener('load', ()=> {
             data:{
                 labels:['BNB'],
                 datasets:[{                        
-                        data:[0.01],
+                        data:[0.01009],
                         backgroundColor:[                            
                             '#008f39'
                         ]
